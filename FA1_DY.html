@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multiplication Table</title>
+</head>
+<body>
+    <script>
+        let p = window.prompt("Enter the # of rows between 2-10:");
+        while (p > 10 || p < 2) {
+            window.alert("Try again! The # should be between 2-10. :(");
+            p = window.prompt("Enter the # of rows between 2-10:");
+        }
+
+        let h = window.prompt("Enter the # of columns between 2-10:");
+        while (h > 10 || h < 2) {
+            window.alert("Try again! The # should be between 2 and 10. :(");
+            h = window.prompt("Enter the # of columns between 2-10:");
+        }
+
+        let i = 1;
+        while (i <= p) {
+            let l = 1;
+            let rowOutput = "";
+            while (l <= h) {
+                rowOutput += (i * l) + ' ';
+                l++;
+            }
+            document.write(rowOutput.trim() + "<br>");
+            i++;
+        }
+    </script>
+</body>
+</html>
